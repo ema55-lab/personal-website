@@ -1,0 +1,391 @@
+/* ========================================
+   Ema Prović — Personal Photography Website
+   Shared Stylesheet
+   ======================================== */
+
+/* --- Design Tokens --- */
+:root {
+  --font-heading: 'Courier New', Courier, monospace;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  --color-bg: #fafafa;
+  --color-heading: #888;
+  --color-text: #333;
+  --color-footer-bg: #f0f0f0;
+  --color-placeholder: #e0e0e0;
+  --color-placeholder-text: #aaa;
+
+  --max-width: 1200px;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: var(--space-md);
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-sm);
+}
+
+p {
+  margin-bottom: var(--space-sm);
+}
+
+/* --- Container --- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* --- Navigation --- */
+nav {
+  padding: var(--space-md) 0;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-heading);
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.nav-links a {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--color-heading);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--color-text);
+}
+
+/* --- Main Content --- */
+main {
+  flex: 1;
+}
+
+/* --- Hero Section --- */
+.hero {
+  padding: var(--space-xl) 0;
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.hero-text p {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--color-heading);
+}
+
+/* --- About Section --- */
+.about {
+  padding: var(--space-xl) 0;
+}
+
+.about p {
+  max-width: 700px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* --- Contact Section --- */
+.contact {
+  padding: var(--space-lg) 0 var(--space-xl);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  font-size: 1.05rem;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* --- Page Header (Projects / Gallery) --- */
+.page-header {
+  padding: var(--space-xl) 0 var(--space-lg);
+}
+
+.page-header h1 {
+  font-size: 3rem;
+}
+
+/* --- Project Cards --- */
+.projects-list {
+  padding-bottom: var(--space-xl);
+}
+
+.projects-list .container {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-text h3 {
+  font-size: 1.4rem;
+  margin-bottom: var(--space-sm);
+}
+
+.project-text p {
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+/* "Read" Pill Button */
+.btn-read {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--color-heading);
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  padding: 0.45rem 1.6rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.btn-read:hover {
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+/* --- Gallery Masonry Grid --- */
+.gallery-grid {
+  padding-bottom: var(--space-xl);
+  columns: 3;
+  column-gap: var(--space-md);
+}
+
+.gallery-grid .placeholder-photo {
+  break-inside: avoid;
+  margin-bottom: var(--space-md);
+}
+
+/* --- Placeholder Photo Styles --- */
+.placeholder-photo {
+  background-color: var(--color-placeholder);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.placeholder-photo span {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--color-placeholder-text);
+}
+
+/* Aspect ratio variants */
+.placeholder-photo.landscape {
+  aspect-ratio: 3 / 2;
+}
+
+.placeholder-photo.portrait {
+  aspect-ratio: 2 / 3;
+}
+
+.placeholder-photo.square {
+  aspect-ratio: 1 / 1;
+}
+
+.placeholder-photo.wide {
+  aspect-ratio: 16 / 9;
+}
+
+.placeholder-photo.hero-photo {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--color-footer-bg);
+  padding: var(--space-lg) 0;
+  margin-top: auto;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.footer-col h4 {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--color-heading);
+  margin-bottom: var(--space-xs);
+  font-weight: 400;
+}
+
+.footer-col p,
+.footer-col a {
+  font-size: 0.9rem;
+  color: var(--color-heading);
+  line-height: 1.6;
+}
+
+.footer-col a:hover {
+  color: var(--color-text);
+}
+
+/* ========================================
+   Responsive Breakpoints
+   ======================================== */
+
+/* --- Tablet (≤768px) --- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .container {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .hero-photo {
+    order: -1;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    columns: 2;
+  }
+
+  footer .container {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* --- Mobile (≤480px) --- */
+@media (max-width: 480px) {
+  :root {
+    --space-md: 1.25rem;
+    --space-lg: 2.5rem;
+    --space-xl: 3.5rem;
+  }
+
+  nav .container {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .gallery-grid {
+    columns: 1;
+  }
+}
