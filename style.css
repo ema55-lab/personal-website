@@ -138,13 +138,13 @@ main {
 
 /* --- Hero Section --- */
 .hero {
-  padding: 3rem 0 var(--space-xl);
+  padding: 3rem 0 3rem;
 }
 
 .hero .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg);
+  gap: var(--space-md);
   align-items: center;
 }
 
@@ -173,7 +173,7 @@ main {
 
 /* --- About Section --- */
 .about {
-  padding: var(--space-xl) 0;
+  padding: 3rem 0;
 }
 
 .about p {
@@ -209,13 +209,17 @@ main {
 
 /* --- Project Cards --- */
 .projects-list {
-  padding-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
 }
 
 .projects-list .container {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 4rem;
+}
+
+.projects-list .container > h2 {
+  margin-bottom: 0;
 }
 
 .project-card {
