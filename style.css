@@ -224,6 +224,10 @@ main {
   margin-bottom: var(--space-sm);
 }
 
+.project-text h3 a:hover {
+  text-decoration: underline;
+}
+
 .project-text p {
   line-height: 1.7;
   margin-bottom: var(--space-md);
