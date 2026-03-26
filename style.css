@@ -209,6 +209,7 @@ main {
 
 /* --- Project Cards --- */
 .projects-list {
+  padding-top: var(--space-lg);
   padding-bottom: var(--space-xl);
 }
 
@@ -216,6 +217,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 8rem;
+}
+
+.projects-list h2 {
+  margin-bottom: -6rem;
 }
 
 .project-card {
