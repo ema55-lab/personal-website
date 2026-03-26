@@ -33,7 +33,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 18px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -138,18 +138,18 @@ main {
 
 /* --- Hero Section --- */
 .hero {
-  padding: 3rem 0 var(--space-xl);
+  padding: 2rem 0 var(--space-md);
 }
 
 .hero .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg);
+  gap: var(--space-sm);
   align-items: center;
 }
 
 .hero-photo img {
-  max-height: 65vh;
+  max-height: 82vh;
   width: auto;
   max-width: 100%;
 }
@@ -209,7 +209,7 @@ main {
 
 /* --- Project Cards --- */
 .projects-list {
-  padding-top: var(--space-lg);
+  padding-top: var(--space-sm);
   padding-bottom: var(--space-xl);
 }
 
@@ -220,6 +220,7 @@ main {
 }
 
 .projects-list h2 {
+  font-size: 2.5rem;
   margin-bottom: -6rem;
 }
 
