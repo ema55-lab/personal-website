@@ -50,7 +50,7 @@
     -->
 
     <!-- Gallery Grid -->
-    <section class="container">
+    <section class="gallery-section">
       <div class="gallery-grid">
 
         <img src="images/Photo09_9.jpg" alt="Landscape photograph by Ema Prović">
@@ -105,6 +105,32 @@
       </div>
     </div>
   </footer>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo enlarged view">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.gallery-grid img').forEach(function(img) {
+      img.addEventListener('click', function() {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+      });
+    });
+
+    lightbox.addEventListener('click', function() {
+      lightbox.classList.remove('open');
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+  </script>
 
 </body>
 </html>
