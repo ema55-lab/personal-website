@@ -268,11 +268,9 @@ main {
   border-color: var(--color-text);
 }
 
-/* --- Gallery Page Container (wider than default) --- */
+/* --- Gallery Page Container (full-width, minimal side padding) --- */
 .gallery-section {
   width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
   padding: 0 var(--space-xs);
 }
 
