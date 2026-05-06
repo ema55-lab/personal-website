@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cycling Series — Ema Prović</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="index.html" class="nav-logo">Ema Prović</a>
+      <div class="nav-links">
+        <a href="projects.html">Projects</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="https://emaprovic.substack.com/" target="_blank" rel="noopener">Substack</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>The cycling series</h1>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+      <div class="gallery-grid">
+
+        <img src="images/6BAD204B-4204-4823-B397-84A6E6C81D55_1_201_a.jpeg" alt="Cycling series photograph by Ema Prović">
+
+        <img src="images/3916137E-AE6A-4AF0-BEE3-0A5781CED663_1_201_a.jpeg" alt="Cycling series photograph by Ema Prović">
+
+        <img src="images/32FB3DE9-C0E5-4692-8298-A85AD75DD16B_1_201_a.jpeg" alt="Cycling series photograph by Ema Prović">
+
+        <img src="images/5338A686-9B0B-4451-BDDD-5D1D4D4CA7B2_1_201_a.jpeg" alt="Cycling series photograph by Ema Prović">
+
+        <img src="images/69C827E5-C246-45F9-8B61-B61FDD6B1483_1_201_a.jpeg" alt="Cycling series photograph by Ema Prović">
+
+        <img src="images/F72AE887-DD4A-4B72-9BA5-F8FF819AD40B_1_201_a.jpeg" alt="Cycling series photograph by Ema Prović">
+
+        <img src="images/F2127331-B1A5-48AD-A8F2-6B0F96A6EC0C_1_201_a.jpeg" alt="Cycling series photograph by Ema Prović">
+
+        <img src="images/AF4DF65F-BC4A-4B5C-9C9E-93DF34856F37.jpeg" alt="Cycling series photograph by Ema Prović">
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-col">
+        <h4>Ema Prović</h4>
+        <p>Film Photography</p>
+      </div>
+      <div class="footer-col">
+        <h4>Location</h4>
+        <p>Brussels / London</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:emaprvc@gmail.com">emaprvc@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo enlarged view">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.gallery-grid img').forEach(function(img) {
+      img.addEventListener('click', function() {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+      });
+    });
+
+    lightbox.addEventListener('click', function() {
+      lightbox.classList.remove('open');
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+  </script>
+
+</body>
+</html>
