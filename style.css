@@ -290,6 +290,10 @@ main {
   cursor: zoom-in;
 }
 
+.gallery-grid img.featured {
+  column-span: all;
+}
+
 .gallery-grid .placeholder-photo {
   break-inside: avoid;
   margin-bottom: var(--space-sm);
