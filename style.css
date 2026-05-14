@@ -162,13 +162,14 @@ main {
 
 .hero-text h1 {
   font-size: 4.5rem;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 0.5rem;
 }
 
 .hero-text p {
   font-family: var(--font-heading);
   font-size: 1.8rem;
   color: var(--color-heading);
+  margin-left: 3.8rem;
 }
 
 /* --- About Section --- */
