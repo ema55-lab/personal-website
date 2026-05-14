@@ -200,7 +200,7 @@ main {
 
 /* --- Page Header (Projects / Gallery) --- */
 .page-header {
-  padding: var(--space-lg) 0 var(--space-md);
+  padding: var(--space-sm) 0 var(--space-md);
 }
 
 .page-header h1 {
