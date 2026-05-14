@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Climbing — Ema Prović</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="index.html" class="nav-logo">Ema Prović</a>
+      <div class="nav-links">
+        <a href="projects.html">Projects</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="https://emaprovic.substack.com/" target="_blank" rel="noopener">Substack</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Rock Climbing</h1>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+      <div class="gallery-grid">
+
+        <img src="images/726B3FA0-50B9-400B-A405-3F4C82DAA1B0_1_201_a.jpeg" alt="Rock climbing photograph by Ema Prović">
+
+        <img src="images/64890ED2-FF40-4C52-A9C3-171E62B57400_1_201_a.jpeg" alt="Rock climbing photograph by Ema Prović">
+
+        <img src="images/7FEE8405-18EA-4BAF-AFA3-B5F9A3A5E9CD_1_201_a.jpeg" alt="Rock climbing photograph by Ema Prović">
+
+        <img src="images/499EA368-131F-4630-801B-4CEC5BCAD513_1_201_a.jpeg" alt="Rock climbing photograph by Ema Prović">
+
+        <img src="images/035E970B-7ACC-4828-AD22-CA020C5A846F_1_201_a.jpeg" alt="Rock climbing photograph by Ema Prović">
+
+        <img src="images/2481144C-0C06-4649-8AA8-1A0AD313B249_1_201_a.jpeg" alt="Rock climbing photograph by Ema Prović">
+
+        <img src="images/3F4D3BF3-D7B1-4AB8-A90B-8BA4E94A01E8_1_201_a.jpeg" alt="Rock climbing photograph by Ema Prović">
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-col">
+        <h4>Ema Prović</h4>
+        <p>Film Photography</p>
+      </div>
+      <div class="footer-col">
+        <h4>Location</h4>
+        <p>Brussels / London</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:emaprvc@gmail.com">emaprvc@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo enlarged view">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.gallery-grid img').forEach(function(img) {
+      img.addEventListener('click', function() {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+      });
+    });
+
+    lightbox.addEventListener('click', function() {
+      lightbox.classList.remove('open');
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+  </script>
+
+</body>
+</html>
