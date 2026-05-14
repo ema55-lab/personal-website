@@ -216,7 +216,7 @@ main {
 .projects-list .container {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 4rem;
 }
 
 .projects-list h2 {
@@ -247,6 +247,7 @@ main {
 }
 
 .project-text p {
+  font-size: 0.85rem;
   line-height: 1.7;
   margin-bottom: var(--space-md);
 }
