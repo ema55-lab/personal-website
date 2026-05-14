@@ -290,8 +290,21 @@ main {
   cursor: zoom-in;
 }
 
-.gallery-grid img.featured {
-  column-span: all;
+.climbing-grid {
+  columns: unset;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  align-items: start;
+}
+
+.climbing-grid img {
+  break-inside: unset;
+  margin-bottom: 0;
+}
+
+.climbing-grid img.featured {
+  grid-column: span 2;
 }
 
 .gallery-grid .placeholder-photo {
