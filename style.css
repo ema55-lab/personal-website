@@ -221,7 +221,7 @@ main {
 
 .projects-list h2 {
   font-size: 2.5rem;
-  margin-bottom: -6rem;
+  margin-bottom: var(--space-md);
 }
 
 .project-card {
@@ -288,6 +288,10 @@ main {
   width: 100%;
   display: block;
   cursor: zoom-in;
+}
+
+.gallery-grid img.featured {
+  column-span: all;
 }
 
 .gallery-grid .placeholder-photo {
