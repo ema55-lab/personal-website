@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brussels Pride 2026 — Ema Prović</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="index.html" class="nav-logo">Ema Prović</a>
+      <div class="nav-links">
+        <a href="projects.html">Projects</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="https://emaprovic.substack.com/" target="_blank" rel="noopener">Substack</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Brussels Pride (2026)</h1>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+      <div class="gallery-grid">
+
+        <img src="images/brussels-pride/91F3C949-4EB5-440B-B646-E2F13DFEB47F.jpeg" alt="Brussels Pride 2026 photograph by Ema Prović">
+
+        <img src="images/brussels-pride/010B32C1-B084-4EC7-990B-AE8B3B782EE6_1_201_a.jpeg" alt="Brussels Pride 2026 photograph by Ema Prović">
+
+        <img src="images/brussels-pride/05B25252-A432-49C5-B95A-5590111ACA3D_1_201_a.jpeg" alt="Brussels Pride 2026 photograph by Ema Prović">
+
+        <img src="images/brussels-pride/2AAD54F1-FE01-4A83-AC2C-6E0BF0A0FC56_4_5005_c.jpeg" alt="Brussels Pride 2026 photograph by Ema Prović">
+
+        <img src="images/brussels-pride/5096871B-640E-49F6-9EB6-087FB36B7DD4_1_201_a.jpeg" alt="Brussels Pride 2026 photograph by Ema Prović">
+
+        <img src="images/brussels-pride/57A1E92F-CDAD-4EC3-AA92-28B0F4254693_1_201_a.jpeg" alt="Brussels Pride 2026 photograph by Ema Prović">
+
+        <img src="images/brussels-pride/675E5302-5432-47E6-B166-4062148F2ED2_1_201_a.jpeg" alt="Brussels Pride 2026 photograph by Ema Prović">
+
+        <img src="images/brussels-pride/7837E03D-C0CF-4B3E-9CDC-6A5216021285_1_201_a.jpeg" alt="Brussels Pride 2026 photograph by Ema Prović">
+
+        <img src="images/brussels-pride/BA9973B5-F84D-408E-996B-2CF1860C7B04_1_201_a.jpeg" alt="Brussels Pride 2026 photograph by Ema Prović">
+
+        <img src="images/brussels-pride/C8B2AB58-2228-44B0-A1EA-12A279DF5ECA_1_201_a.jpeg" alt="Brussels Pride 2026 photograph by Ema Prović">
+
+        <img src="images/brussels-pride/E1143737-7997-4595-823E-7A24A0699C67_1_201_a.jpeg" alt="Brussels Pride 2026 photograph by Ema Prović">
+
+        <img src="images/brussels-pride/E31C7FFA-9348-4CCE-893D-1EA1DF7F5582_1_201_a.jpeg" alt="Brussels Pride 2026 photograph by Ema Prović">
+
+        <img src="images/brussels-pride/ECEDA488-D5E4-4725-A063-93B18298B958_1_201_a.jpeg" alt="Brussels Pride 2026 photograph by Ema Prović">
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-col">
+        <h4>Ema Prović</h4>
+        <p>Film Photography</p>
+      </div>
+      <div class="footer-col">
+        <h4>Location</h4>
+        <p>Brussels / London</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:emaprvc@gmail.com">emaprvc@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo enlarged view">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.gallery-grid img').forEach(function(img) {
+      img.addEventListener('click', function() {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+      });
+    });
+
+    lightbox.addEventListener('click', function() {
+      lightbox.classList.remove('open');
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+  </script>
+
+</body>
+</html>
