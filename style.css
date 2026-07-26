@@ -407,7 +407,9 @@ footer .container {
 .footer-col a:hover {
   color: var(--color-text);
 }
-
+.footer-col a + a {
+  margin-left: 1.5rem;
+}
 /* ========================================
    Responsive Breakpoints
    ======================================== */
