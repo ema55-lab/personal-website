@@ -513,3 +513,8 @@ footer .container {
     flex-direction: column;
   }
 }
+.align-row .crop-box img {
+    position: static;
+    height: auto;
+  }
+}
