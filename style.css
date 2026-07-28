@@ -144,7 +144,7 @@ main {
 .hero .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-sm);
+gap: var(--space-lg);
   align-items: center;
 }
 
