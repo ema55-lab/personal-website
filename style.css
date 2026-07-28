@@ -493,8 +493,7 @@ footer .container {
   width: 100%;
   height: auto;
   cursor: zoom-in;
-}
 .featured-bottom {
-  margin-top: var(--space-0g);
+  margin-top: 0;
   margin-bottom: 0;
 }
