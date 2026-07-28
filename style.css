@@ -210,7 +210,7 @@ main {
 
 /* --- Project Cards --- */
 .projects-list {
-  padding-top: var(--space-lg);
+padding-top: var(--space-xs);
   padding-bottom: var(--space-xl);
 }
 
