@@ -502,6 +502,7 @@ footer .container {
   display: flex;
   gap: var(--space-sm);
   align-items: flex-start;
+  padding-bottom: 0;
 }
 
 .balanced-grid .masonry-col {
