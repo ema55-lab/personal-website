@@ -32,6 +32,10 @@
 
     <!-- Gallery Grid -->
     <section class="gallery-section">
+      <div class="gallery-featured">
+        <img width="1600" height="1074" loading="lazy" src="images/Photo16_16.jpg" alt="Landscape photograph by Ema Prović">
+      </div>
+
       <div class="gallery-grid">
 
         <img width="1600" height="1074" loading="lazy" src="images/Photo09_9.jpg" alt="Landscape photograph by Ema Prović">
@@ -40,13 +44,9 @@
 
         <img width="1074" height="1600" loading="lazy" src="images/Photo13_13.jpg" alt="Portrait photograph by Ema Prović">
 
-        <img width="1074" height="1600" loading="lazy" src="images/Photo14_14.jpg" alt="Portrait photograph by Ema Prović">
-
         <img width="1600" height="1074" loading="lazy" src="images/Photo15_15.jpg" alt="Landscape photograph by Ema Prović">
 
-        <img width="1600" height="1074" loading="lazy" src="images/Photo16_16.jpg" alt="Landscape photograph by Ema Prović">
-
-        <img width="1600" height="1074" loading="lazy" src="images/Photo19_19.jpg" alt="Landscape photograph by Ema Prović">
+        <img width="1074" height="1600" loading="lazy" src="images/Photo14_14.jpg" alt="Portrait photograph by Ema Prović">
 
         <img width="1600" height="1074" loading="lazy" src="images/Photo23_23.jpg" alt="Landscape photograph by Ema Prović">
 
@@ -64,6 +64,10 @@
 
         <img width="1074" height="1600" loading="lazy" src="images/Photo36_36A.jpg" alt="Portrait photograph by Ema Prović">
 
+      </div>
+
+      <div class="gallery-featured featured-bottom">
+        <img width="1600" height="1074" loading="lazy" src="images/Photo19_19.jpg" alt="Landscape photograph by Ema Prović">
       </div>
     </section>
 
@@ -97,7 +101,7 @@
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
 
-    document.querySelectorAll('.gallery-grid img').forEach(function(img) {
+    document.querySelectorAll('.gallery-grid img, .gallery-featured img').forEach(function(img) {
       img.addEventListener('click', function() {
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
