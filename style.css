@@ -494,3 +494,7 @@ footer .container {
   height: auto;
   cursor: zoom-in;
 }
+.featured-bottom {
+  margin-top: var(--space-lg);
+  margin-bottom: 0;
+}
