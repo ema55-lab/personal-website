@@ -497,3 +497,19 @@ footer .container {
   margin-top: 0;
   margin-bottom: 0;
 }
+.balanced-grid {
+  columns: unset;
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+}
+
+.balanced-grid .masonry-col {
+  flex: 1;
+}
+
+@media (max-width: 480px) {
+  .balanced-grid {
+    flex-direction: column;
+  }
+}
