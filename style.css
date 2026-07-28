@@ -485,3 +485,12 @@ footer .container {
   white-space: nowrap;
   border: 0;
 }
+.gallery-featured {
+  margin-bottom: var(--space-md);
+}
+
+.gallery-featured img {
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
