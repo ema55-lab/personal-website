@@ -32,11 +32,16 @@
 
     <!-- Gallery Grid -->
     <section class="gallery-section">
+      <div class="align-row">
+        <div class="crop-box">
+          <img width="1074" height="1600" loading="lazy" src="images/64890ED2-FF40-4C52-A9C3-171E62B57400_1_201_a.jpeg" alt="Rock climbing photograph by Ema Prović">
+        </div>
+        <img width="1600" height="1074" loading="lazy" src="images/499EA368-131F-4630-801B-4CEC5BCAD513_1_201_a.jpeg" alt="Rock climbing photograph by Ema Prović">
+      </div>
+
       <div class="gallery-grid climbing-grid">
 
-        <img width="1074" height="1600" loading="lazy" src="images/64890ED2-FF40-4C52-A9C3-171E62B57400_1_201_a.jpeg" alt="Rock climbing photograph by Ema Prović">
 
-        <img width="1600" height="1074" loading="lazy" src="images/499EA368-131F-4630-801B-4CEC5BCAD513_1_201_a.jpeg" alt="Rock climbing photograph by Ema Prović" class="featured">
 
         <img width="1074" height="1600" loading="lazy" src="images/035E970B-7ACC-4828-AD22-CA020C5A846F_1_201_a.jpeg" alt="Rock climbing photograph by Ema Prović">
 
@@ -77,7 +82,7 @@
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
 
-    document.querySelectorAll('.gallery-grid img').forEach(function(img) {
+    document.querySelectorAll('.gallery-grid img, .align-row img').forEach(function(img) {
       img.addEventListener('click', function() {
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
