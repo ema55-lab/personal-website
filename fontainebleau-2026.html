@@ -32,25 +32,33 @@
 
     <!-- Gallery Grid -->
     <section class="gallery-section">
-      <div class="gallery-grid climbing-grid">
+      <div class="gallery-featured">
+        <img width="1895" height="1272" loading="lazy" src="images/Photo30_30.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+      </div>
 
-        <img width="1600" height="1074" loading="lazy" src="images/Photo30_30.jpg" alt="Fontainebleau 2026 photograph by Ema Prović" class="featured">
+      <div class="gallery-grid balanced-grid">
 
-        <img width="1272" height="1895" loading="lazy" src="images/Photo03_3.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+        <div class="masonry-col">
+          <img width="1272" height="1895" loading="lazy" src="images/Photo03_3.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
 
-        <img width="1600" height="1074" loading="lazy" src="images/Photo05_5.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+          <img width="1272" height="1895" loading="lazy" src="images/Photo29_29.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+        </div>
 
-        <img width="1600" height="1074" loading="lazy" src="images/Photo16_16.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+        <div class="masonry-col">
+          <img width="1272" height="1895" loading="lazy" src="images/Photo05_5.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
 
-        <img width="1600" height="1074" loading="lazy" src="images/Photo29_29.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+          <img width="1895" height="1272" loading="lazy" src="images/Photo16_16.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
 
-        <img width="1600" height="1074" loading="lazy" src="images/Photo32_32.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+          <img width="1895" height="1272" loading="lazy" src="images/Photo32_32.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+        </div>
 
-        <img width="1600" height="1074" loading="lazy" src="images/Photo35_35.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+        <div class="masonry-col">
+          <img width="1272" height="1895" loading="lazy" src="images/Photo35_35.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
 
-        <img width="1600" height="1074" loading="lazy" src="images/Photo36_36.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+          <img width="1272" height="1895" loading="lazy" src="images/Photo36_36.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
 
-        <img width="1600" height="1074" loading="lazy" src="images/ZrZnN.jpeg" alt="Fontainebleau 2026 photograph by Ema Prović" class="featured">
+          <img class="col-end" width="1272" height="1895" loading="lazy" src="images/ZrZnN.jpeg" alt="Fontainebleau 2026 photograph by Ema Prović">
+        </div>
 
       </div>
     </section>
@@ -85,7 +93,7 @@
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
 
-    document.querySelectorAll('.gallery-grid img').forEach(function(img) {
+    document.querySelectorAll('.gallery-grid img, .gallery-featured img').forEach(function(img) {
       img.addEventListener('click', function() {
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
