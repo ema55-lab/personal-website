@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fontainebleau 2026 — Ema Prović</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="index.html" class="nav-logo">Ema Prović</a>
+      <div class="nav-links">
+        <a href="projects.html">Projects</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="https://emaprovic.substack.com/" target="_blank" rel="noopener">Substack</a>
+        <a href="https://www.instagram.com/ema_ldn/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="visually-hidden">Fontainebleau 2026</h1>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+      <div class="gallery-grid climbing-grid">
+
+        <img width="1600" height="1074" loading="lazy" src="images/Photo30_30.jpg" alt="Fontainebleau 2026 photograph by Ema Prović" class="featured">
+
+        <img width="1272" height="1895" loading="lazy" src="images/Photo03_3.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+
+        <img width="1600" height="1074" loading="lazy" src="images/Photo05_5.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+
+        <img width="1600" height="1074" loading="lazy" src="images/Photo16_16.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+
+        <img width="1600" height="1074" loading="lazy" src="images/Photo29_29.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+
+        <img width="1600" height="1074" loading="lazy" src="images/Photo32_32.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+
+        <img width="1600" height="1074" loading="lazy" src="images/Photo35_35.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+
+        <img width="1600" height="1074" loading="lazy" src="images/Photo36_36.jpg" alt="Fontainebleau 2026 photograph by Ema Prović">
+
+        <img width="1600" height="1074" loading="lazy" src="images/ZrZnN.jpeg" alt="Fontainebleau 2026 photograph by Ema Prović" class="featured">
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-col">
+        <h4>Ema Prović</h4>
+        <p>Film Photography</p>
+      </div>
+      <div class="footer-col">
+        <h4>Location</h4>
+        <p>Brussels / London</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:emaprvc@gmail.com">emaprvc@gmail.com</a>
+        <a href="https://www.instagram.com/ema_ldn/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo enlarged view">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.gallery-grid img').forEach(function(img) {
+      img.addEventListener('click', function() {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+      });
+    });
+
+    lightbox.addEventListener('click', function() {
+      lightbox.classList.remove('open');
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+  </script>
+
+</body>
+</html>
